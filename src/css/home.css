@@ -1,0 +1,25 @@
+.logo{
+    width: 60px;
+    height: 60px;
+}
+
+nav{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 2fr;
+}
+
+.bag{
+    width: 60px;
+    height: 60px;
+}
+
+.foto{
+    width: 400px;
+    height:500px ;
+}
+
+.contenedorProductos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
