@@ -1,0 +1,17 @@
+.contenedorArticulo{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.contenedorTotal{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contenedorOpciones{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+}
