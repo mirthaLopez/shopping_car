@@ -1,10 +1,12 @@
 const contenedorProductos = document.querySelector(".contenedorProductos");
+const contadorCarrito= document.getElementById("contadorCarrito")
 let listaCarrito = JSON.parse(localStorage.getItem("listaCarrito")) || [];
 
 var modal = document.getElementById("myModal");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
+let contador= 0;
 
 //delegación de eventos
 contenedorProductos.addEventListener("click", function (event) {
@@ -25,7 +27,9 @@ contenedorProductos.addEventListener("click", function (event) {
                 quantity: cantidad,
                 size: talla
             };
-    
+            contador=contador+ Number(cantidad);
+            contadorCarrito.innerHTML=contador;
+            console.log(contador);
             listaCarrito.push(articulo);
             localStorage.setItem("listaCarrito", JSON.stringify(listaCarrito));
     
@@ -45,4 +49,5 @@ contenedorProductos.addEventListener("click", function (event) {
         }
        
     }
-});
+})
+
